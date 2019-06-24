@@ -1,0 +1,20 @@
+@import '../sharedStyles/variables.scss';
+
+.header {
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: 40px;
+
+  h1, h2 {
+    font-weight: bolder;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
