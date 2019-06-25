@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Header from './components/Header';
 import IntegersForm from './components/IntegersForm';
@@ -24,6 +24,12 @@ function App() {
     const sum = findHighestSum(stripAndFilterIntegers(integers));
     setHighestSum(sum);
   }
+
+  useEffect(() => {
+    if (integerError) {
+      setHighestSum('');
+    }
+  }, [integerError]);
 
   const formProps = {
     integers,
