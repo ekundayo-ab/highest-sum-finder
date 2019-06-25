@@ -32,6 +32,7 @@
             "every": [ "id" ]
         },
         "allowChildren": false
-      }]
+      }],
+      "no-underscore-dangle":"off"
     }
 }
