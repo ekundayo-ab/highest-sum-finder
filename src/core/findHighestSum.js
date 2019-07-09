@@ -1,42 +1,14 @@
 /**
- * @desc Negative integers have a lowering effect on the sum, so it
- * is ensured that they are multiplied by available zeroes to neutralize
- * their effect on the overall sum
+ * @desc Multiplies integer pairs in an array of even length
  *
- * @param {number} neutralsCount - count of neutrals i.e zeroes
- * @param {number} negatives - array of negative integers
+ * @param {array} integers - Array of integers (array must have even length)
  *
- * @returns {number} - sum of multiplied and added negative integers
+ * @returns {number} sum of multiplied and added integers
  */
-function neutralizeAndSumNegatives(neutralsCount, negatives) {
-  const _negatives = negatives;
-  if (negatives.length > neutralsCount) {
-    for (let i = 0; i < neutralsCount; i += 1) {
-      _negatives.pop();
-    }
-  } else {
-    _negatives.length = 0;
-  }
-
-  return _negatives.reduce((acc, next) => acc + next, 0);
-}
-
-/**
- * @desc Multiplies positives pair and add with 1 remnant in array if any.
- *
- * @param {array} positives - Array of only positive integers
- *
- * @returns {number} sum of multiplied and added positive integers
- */
-function boostAndSumPositives(positives) {
+function multiplyAndSumIntegers(integers) {
   let sum = 0;
-
-  if (positives.length % 2 !== 0) {
-    sum += positives.shift();
-  }
-
-  for (let i = 0; i < positives.length; i += 2) {
-    sum += positives[i] * positives[i + 1];
+  for (let i = 0; i < integers.length; i += 2) {
+    sum += integers[i] * integers[i + 1];
   }
 
   return sum;
@@ -44,10 +16,9 @@ function boostAndSumPositives(positives) {
 
 /**
  * @desc Finds the highest sum from the array by separating the negatives
- * positives and neutrals items, multiplies positives with high values and
- * then multiplies negatives with available zeroes before adding resultant
- * values together.
- *
+ * positives and neutrals items, multiplies pairs of higher values in negatives
+ * or integers together and multiplies out a single negative integer if one or more
+ * zero(es) exists in the integers input.
  *
  * @param {array} intsArray - Array of integers
  *
@@ -95,8 +66,16 @@ function findHighestSum(intsArray) {
 
   positives = splitIndex !== undefined ? sortedIntsArray.slice(splitIndex) : [];
 
-  sum += neutralizeAndSumNegatives(neutralsCount, negatives);
-  sum += boostAndSumPositives(positives);
+  if (negatives.length % 2 !== 0 && neutralsCount) {
+    negatives.shift();
+  }
+
+  if (positives.length % 2 !== 0) {
+    sum += positives.shift();
+  }
+
+  sum += multiplyAndSumIntegers(positives);
+  sum += multiplyAndSumIntegers(negatives);
 
   return sum;
 }
