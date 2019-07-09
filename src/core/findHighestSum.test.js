@@ -10,6 +10,7 @@ const {
   dataset6,
   dataset7,
   dataset8,
+  dataset9,
 } = integers;
 
 test(`gives 27 as the highest sum for dataset 1 - [${dataset1}]`, () => {
@@ -28,12 +29,12 @@ test(`gives 6005 as the highest sum for dataset 4 - [${dataset4}]`, () => {
   expect(findHighestSum(dataset4)).toEqual(6005);
 });
 
-test(`gives 31 as the highest sum for dataset 5 - [${dataset5}]`, () => {
-  expect(findHighestSum(dataset5)).toEqual(31);
+test(`gives 388 as the highest sum for dataset 5 - [${dataset5}]`, () => {
+  expect(findHighestSum(dataset5)).toEqual(388);
 });
 
-test(`gives 296 as the highest sum for dataset 6 - [${dataset6}]`, () => {
-  expect(findHighestSum(dataset6)).toEqual(296);
+test(`gives 925 as the highest sum for dataset 6 - [${dataset6}]`, () => {
+  expect(findHighestSum(dataset6)).toEqual(925);
 });
 
 test(`gives 9 as the highest sum for dataset 7 - [${dataset7}]`, () => {
@@ -41,5 +42,9 @@ test(`gives 9 as the highest sum for dataset 7 - [${dataset7}]`, () => {
 });
 
 test(`gives 401 as the highest sum for dataset 8 - [${dataset8}]`, () => {
+  expect(findHighestSum(dataset8)).toEqual(401);
+});
+
+test(`gives 62 as the highest sum for dataset 9 - [${dataset9}]`, () => {
   expect(findHighestSum(dataset8)).toEqual(401);
 });
