@@ -20,7 +20,7 @@ The unit test for the `findHighestSum` function has different datasets used in t
 NB: After running `npm test` or `npm run test` if test results is not generated press `a` and it should be generated in the terminal.
 
 See tests shots run below
-![Unit test](screenshots/unit_test.png?raw=true "Unit Test")
+![Unit test](screenshots/unit_tests.png?raw=true "Unit Test")
 
 ### Screenshots
 ![Default State](screenshots/default_state.png?raw=true "Default State")
