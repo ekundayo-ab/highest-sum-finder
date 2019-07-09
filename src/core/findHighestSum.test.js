@@ -11,6 +11,7 @@ const {
   dataset7,
   dataset8,
   dataset9,
+  dataset10,
 } = integers;
 
 test(`gives 27 as the highest sum for dataset 1 - [${dataset1}]`, () => {
@@ -47,4 +48,8 @@ test(`gives 401 as the highest sum for dataset 8 - [${dataset8}]`, () => {
 
 test(`gives 62 as the highest sum for dataset 9 - [${dataset9}]`, () => {
   expect(findHighestSum(dataset8)).toEqual(401);
+});
+
+test(`gives 33 as the highest sum for dataset 10 - [${dataset10}]`, () => {
+  expect(findHighestSum(dataset10)).toEqual(33);
 });

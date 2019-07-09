@@ -10,4 +10,5 @@ export default {
   dataset7: [9], // => 9
   dataset8: [1, 400], // => 401
   dataset9: [-3, -4, -5, -10], // => 62
+  dataset10: [-5, 2, 4, 9], // => 33
 };

@@ -8,7 +8,7 @@
 function multiplyAndSumIntegers(integers) {
   let sum = 0;
   for (let i = 0; i < integers.length; i += 2) {
-    sum += integers[i] * integers[i + 1];
+    sum += integers[i] * (integers[i + 1] || 1);
   }
 
   return sum;
