@@ -1,7 +1,7 @@
 # Highest Sum Finder
 An application for calculating the highest sum of an array of integer values, in finding this sum, pair of items in the array can be multiplied together and added to the remaining items in the array.
 
-This application provides functionality for entering the array integer values as comma separated inputs in a text box and submitting the form to see the generated highest sum.
+This application provides functionality for entering the array integer values as comma separated inputs in a text box and submitting the form to see the generated highest sum. View it live here https://highest-sum-finder.netlify.com/
 
 ### Requirements
 - NodeJS and NPM
